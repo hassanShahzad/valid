@@ -49,7 +49,12 @@ const Main = () => {
 
   const step = () => {
     return (
-      <CSSTransition in={inProp} classNames='fade' timeout={300} unmountOnExit>
+      <CSSTransition
+        in={inProp}
+        classNames='fade'
+        timeout={duration}
+        unmountOnExit
+      >
         <RootContainer>
           {state.step === "Email" && (
             <EmailStep email={state.email} onSubmit={emailFormHandle} key='1' />
@@ -69,7 +74,12 @@ const Main = () => {
   };
   const stepMobile = () => {
     return (
-      <CSSTransition in={inProp} classNames='fade' timeout={300} unmountOnExit>
+      <CSSTransition
+        in={inProp}
+        classNames='fade'
+        timeout={duration}
+        unmountOnExit
+      >
         <RootContainerMobile>
           {state.step === "Email" && (
             <EmailStep email={state.email} onSubmit={emailFormHandle} key='1' />

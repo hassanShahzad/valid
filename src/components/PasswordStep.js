@@ -39,12 +39,10 @@ const PasswordStep = (props) => {
     resolver: yupResolver(Schema),
   });
   const { errors } = formState;
-  console.log(errors);
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Container>
         <Title>Enter your password</Title>
-
         <InputField
           {...register("password", {
             required: true,
@@ -53,7 +51,6 @@ const PasswordStep = (props) => {
           name='password'
           type='password'
         />
-
         <Button type='submit'>Next</Button>
         {errors && errors.password && (
           <InvalidMessage>{errors.password.message}</InvalidMessage>
@@ -62,5 +59,4 @@ const PasswordStep = (props) => {
     </form>
   );
 };
-
 export default PasswordStep;
